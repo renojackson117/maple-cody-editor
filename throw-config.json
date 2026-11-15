@@ -62,5 +62,12 @@
       "spacing": "CUser::GetBulletDelay 0x004DE2D0 block17",
       "flight": "CUserRemote::OnShootAttack blocks 311/316"
     }
+  },
+  "spawnAnchor": {
+    "referenceAction": "stand1",
+    "referenceFrame": 0,
+    "releaseAnchor": "body.map.navel at motions[action].attackFrame",
+    "source": "Character.wz/00002000.img/{action}/{frame}/body/map/navel",
+    "rule": "User-requested application of the release-body displacement to the original runtime spawn; this additional anchor rule is not verified original-client logic."
   }
 }
