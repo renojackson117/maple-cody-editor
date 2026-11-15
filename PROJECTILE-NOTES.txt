@@ -1,0 +1,21 @@
+표창 동작 수정 근거
+
+직접 확인한 데이터: KMS v1.2.55
+- Character.wz/00002000.img/swingO1~3: 300/150/350ms.
+- Character.wz/Weapon/01472000.img/info/afterImage: swordOL.
+- Character.wz/Afterimage/swordOL.img/1/swingO1~3: 공격 프레임 인덱스 2.
+- 이에 따른 첫 발사 시점: 원본 모션 시간 기준 450ms.
+- Skill.wz의 bulletCount: 럭키세븐 2, 트리플 스로우 3.
+- Item.wz/Consume/0207.img: 각 bullet 프레임의 실제 PNG, origin, delay 사용.
+
+WZ에 없는 이동 로직은 별도 참고 구현으로 구분한다.
+- 참고: HeavenClient (원본 Nexon 클라이언트가 아닌 v83 재구현).
+- https://github.com/ryantpayton/MapleStory-Client/blob/master/Gameplay/Combat/Bullet.cpp
+- https://github.com/ryantpayton/MapleStory-Client/blob/master/Constants.h
+- 참고 구현의 발사 위치: 캐릭터 앞 30px, 위 26px.
+- 참고 구현의 이동량: clamp(목표까지 가로 거리 / 32, 3, 6)px / 8ms.
+- 현재 빈 공간 400px 목표에서는 750px/s. 실제 KMS 실행 파일과 일치 여부는 미검증.
+- 연속 발사 간격과 쉐도우 파트너 위치/지연은 기존 미리보기 근사값 유지.
+- 재생 속도 슬라이더는 모션과 표창의 시간을 함께 변경한다.
+
+기계 판독용 값과 출처는 throw-config.json에 구분해 보존했다.

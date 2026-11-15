@@ -1,0 +1,65 @@
+﻿{
+    "runtimeReference":  {
+                             "source":  "HeavenClient v83 reimplementation (not verified against original KMS binary)",
+                             "url":  "https://github.com/ryantpayton/MapleStory-Client/blob/master/Gameplay/Combat/Bullet.cpp",
+                             "arrivalMargin":  10,
+                             "velocityDivisor":  32,
+                             "minPixelsPerTick":  3,
+                             "spawn":  {
+                                           "y":  -26,
+                                           "x":  -30
+                                       },
+                             "maxPixelsPerTick":  6,
+                             "timestepMs":  8,
+                             "targetX":  -400
+                         },
+    "wzVersion":  "KMS v1.2.55",
+    "previewOnly":  {
+                        "partnerOffset":  {
+                                              "y":  -4,
+                                              "x":  22
+                                          },
+                        "partnerDelayMs":  120,
+                        "shotSpacingMs":  70,
+                        "note":  "Multi-shot and partner spacing are preview approximations, not WZ properties."
+                    },
+    "skills":  {
+                   "triple":  {
+                                  "id":  "4121007",
+                                  "bulletCount":  3
+                              },
+                   "lucky":  {
+                                 "id":  "4001344",
+                                 "bulletCount":  2
+                             }
+               },
+    "motions":  {
+                    "swingO3":  {
+                                    "delays":  [
+                                                   300,
+                                                   150,
+                                                   350
+                                               ],
+                                    "source":  "Character.wz/Afterimage/swordOL.img/1/swingO3",
+                                    "attackFrame":  2
+                                },
+                    "swingO2":  {
+                                    "delays":  [
+                                                   300,
+                                                   150,
+                                                   350
+                                               ],
+                                    "source":  "Character.wz/Afterimage/swordOL.img/1/swingO2",
+                                    "attackFrame":  2
+                                },
+                    "swingO1":  {
+                                    "delays":  [
+                                                   300,
+                                                   150,
+                                                   350
+                                               ],
+                                    "source":  "Character.wz/Afterimage/swordOL.img/1/swingO1",
+                                    "attackFrame":  2
+                                }
+                }
+}
