@@ -1,65 +1,66 @@
-﻿{
-    "runtimeReference":  {
-                             "source":  "HeavenClient v83 reimplementation (not verified against original KMS binary)",
-                             "url":  "https://github.com/ryantpayton/MapleStory-Client/blob/master/Gameplay/Combat/Bullet.cpp",
-                             "arrivalMargin":  10,
-                             "velocityDivisor":  32,
-                             "minPixelsPerTick":  3,
-                             "spawn":  {
-                                           "y":  -26,
-                                           "x":  -30
-                                       },
-                             "maxPixelsPerTick":  6,
-                             "timestepMs":  8,
-                             "targetX":  -400
-                         },
-    "wzVersion":  "KMS v1.2.55",
-    "previewOnly":  {
-                        "partnerOffset":  {
-                                              "y":  -4,
-                                              "x":  22
-                                          },
-                        "partnerDelayMs":  120,
-                        "shotSpacingMs":  70,
-                        "note":  "Multi-shot and partner spacing are preview approximations, not WZ properties."
-                    },
-    "skills":  {
-                   "triple":  {
-                                  "id":  "4121007",
-                                  "bulletCount":  3
-                              },
-                   "lucky":  {
-                                 "id":  "4001344",
-                                 "bulletCount":  2
-                             }
-               },
-    "motions":  {
-                    "swingO3":  {
-                                    "delays":  [
-                                                   300,
-                                                   150,
-                                                   350
-                                               ],
-                                    "source":  "Character.wz/Afterimage/swordOL.img/1/swingO3",
-                                    "attackFrame":  2
-                                },
-                    "swingO2":  {
-                                    "delays":  [
-                                                   300,
-                                                   150,
-                                                   350
-                                               ],
-                                    "source":  "Character.wz/Afterimage/swordOL.img/1/swingO2",
-                                    "attackFrame":  2
-                                },
-                    "swingO1":  {
-                                    "delays":  [
-                                                   300,
-                                                   150,
-                                                   350
-                                               ],
-                                    "source":  "Character.wz/Afterimage/swordOL.img/1/swingO1",
-                                    "attackFrame":  2
-                                }
-                }
+{
+  "wzVersion": "KMS v1.2.55",
+  "skills": {
+    "triple": {
+      "id": "4121007",
+      "bulletCount": 3
+    },
+    "lucky": {
+      "id": "4001344",
+      "bulletCount": 2
+    }
+  },
+  "motions": {
+    "swingO3": {
+      "delays": [
+        300,
+        150,
+        350
+      ],
+      "source": "Character.wz/Afterimage/swordOL.img/1/swingO3",
+      "attackFrame": 2
+    },
+    "swingO2": {
+      "delays": [
+        300,
+        150,
+        350
+      ],
+      "source": "Character.wz/Afterimage/swordOL.img/1/swingO2",
+      "attackFrame": 2
+    },
+    "swingO1": {
+      "delays": [
+        300,
+        150,
+        350
+      ],
+      "source": "Character.wz/Afterimage/swordOL.img/1/swingO1",
+      "attackFrame": 2
+    }
+  },
+  "runtimeClient": {
+    "source": "Original client disassembly, GMS v95; not extracted from KMS v1.2.55 executable",
+    "repository": "https://github.com/jon-zu/shroom95-decomp",
+    "commit": "6eada755b00522e39213ee93e75471a98b1e30a3",
+    "spawn": {
+      "x": -50,
+      "y": -28
+    },
+    "emptyTargetX": -200,
+    "millisecondsPerPixel": 1.5,
+    "shotSpacingMs": 120,
+    "shadowOffset": {
+      "x": 30,
+      "y": 0
+    },
+    "shadowPoseDelayMs": 0,
+    "functions": {
+      "spawnX": "CUserRemote::OnShootAttack 0x005567D0 blocks 298/306/309",
+      "spawnY": "GetShootAttackPt0 0x005039A0 default branch",
+      "shadowOffset": "CUser::PrepareShadowPartnerActionLayer 0x004E1730 blocks 13/19/20",
+      "spacing": "CUser::GetBulletDelay 0x004DE2D0 block17",
+      "flight": "CUserRemote::OnShootAttack blocks 311/316"
+    }
+  }
 }

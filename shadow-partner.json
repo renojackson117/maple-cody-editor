@@ -1,0 +1,760 @@
+﻿{
+    "actions":  {
+                    "rope":  {
+                                 "1":  {
+                                           "src":  "assets/shadow-partner/rope-1.png",
+                                           "origin":  {
+                                                          "y":  65,
+                                                          "x":  24
+                                                      }
+                                       },
+                                 "0":  {
+                                           "src":  "assets/shadow-partner/rope-0.png",
+                                           "origin":  {
+                                                          "y":  69,
+                                                          "x":  24
+                                                      }
+                                       }
+                             },
+                    "stabOF":  {
+                                   "2":  {
+                                             "src":  "assets/shadow-partner/stabOF-2.png",
+                                             "origin":  {
+                                                            "y":  61,
+                                                            "x":  73
+                                                        }
+                                         },
+                                   "1":  {
+                                             "src":  "assets/shadow-partner/stabOF-1.png",
+                                             "origin":  {
+                                                            "y":  67,
+                                                            "x":  57
+                                                        }
+                                         },
+                                   "0":  {
+                                             "src":  "assets/shadow-partner/stabOF-0.png",
+                                             "origin":  {
+                                                            "y":  62,
+                                                            "x":  28
+                                                        }
+                                         }
+                               },
+                    "heal":  {
+                                 "2":  {
+                                           "src":  "assets/shadow-partner/heal-2.png",
+                                           "origin":  {
+                                                          "y":  69,
+                                                          "x":  32
+                                                      }
+                                       },
+                                 "1":  {
+                                           "src":  "assets/shadow-partner/heal-1.png",
+                                           "origin":  {
+                                                          "y":  67,
+                                                          "x":  35
+                                                      }
+                                       },
+                                 "0":  {
+                                           "src":  "assets/shadow-partner/heal-0.png",
+                                           "origin":  {
+                                                          "y":  67,
+                                                          "x":  28
+                                                      }
+                                       }
+                             },
+                    "jump":  {
+                                 "0":  {
+                                           "src":  "assets/shadow-partner/jump-0.png",
+                                           "origin":  {
+                                                          "y":  67,
+                                                          "x":  28
+                                                      }
+                                       }
+                             },
+                    "alert":  {
+                                  "2":  {
+                                            "src":  "assets/shadow-partner/alert-2.png",
+                                            "origin":  {
+                                                           "y":  68,
+                                                           "x":  28
+                                                       }
+                                        },
+                                  "1":  {
+                                            "src":  "assets/shadow-partner/alert-1.png",
+                                            "origin":  {
+                                                           "y":  67,
+                                                           "x":  28
+                                                       }
+                                        },
+                                  "0":  {
+                                            "src":  "assets/shadow-partner/alert-0.png",
+                                            "origin":  {
+                                                           "y":  66,
+                                                           "x":  28
+                                                       }
+                                        }
+                              },
+                    "shootF":  {
+                                   "2":  {
+                                             "src":  "assets/shadow-partner/shootF-2.png",
+                                             "origin":  {
+                                                            "y":  68,
+                                                            "x":  38
+                                                        }
+                                         },
+                                   "1":  {
+                                             "src":  "assets/shadow-partner/shootF-1.png",
+                                             "origin":  {
+                                                            "y":  68,
+                                                            "x":  38
+                                                        }
+                                         },
+                                   "0":  {
+                                             "src":  "assets/shadow-partner/shootF-0.png",
+                                             "origin":  {
+                                                            "y":  69,
+                                                            "x":  36
+                                                        }
+                                         }
+                               },
+                    "stabO2":  {
+                                   "1":  {
+                                             "src":  "assets/shadow-partner/stabO2-1.png",
+                                             "origin":  {
+                                                            "y":  62,
+                                                            "x":  49
+                                                        }
+                                         },
+                                   "0":  {
+                                             "src":  "assets/shadow-partner/stabO2-0.png",
+                                             "origin":  {
+                                                            "y":  69,
+                                                            "x":  34
+                                                        }
+                                         }
+                               },
+                    "stand1":  {
+                                   "2":  {
+                                             "src":  "assets/shadow-partner/stand1-2.png",
+                                             "origin":  {
+                                                            "y":  69,
+                                                            "x":  28
+                                                        }
+                                         },
+                                   "1":  {
+                                             "src":  "assets/shadow-partner/stand1-1.png",
+                                             "origin":  {
+                                                            "y":  69,
+                                                            "x":  28
+                                                        }
+                                         },
+                                   "0":  {
+                                             "src":  "assets/shadow-partner/stand1-0.png",
+                                             "origin":  {
+                                                            "y":  69,
+                                                            "x":  28
+                                                        }
+                                         }
+                               },
+                    "stabT1":  {
+                                   "2":  {
+                                             "src":  "assets/shadow-partner/stabT1-2.png",
+                                             "origin":  {
+                                                            "y":  60,
+                                                            "x":  62
+                                                        }
+                                         },
+                                   "1":  {
+                                             "src":  "assets/shadow-partner/stabT1-1.png",
+                                             "origin":  {
+                                                            "y":  61,
+                                                            "x":  54
+                                                        }
+                                         },
+                                   "0":  {
+                                             "src":  "assets/shadow-partner/stabT1-0.png",
+                                             "origin":  {
+                                                            "y":  65,
+                                                            "x":  42
+                                                        }
+                                         }
+                               },
+                    "prone":  {
+                                  "0":  {
+                                            "src":  "assets/shadow-partner/prone-0.png",
+                                            "origin":  {
+                                                           "y":  41,
+                                                           "x":  48
+                                                       }
+                                        }
+                              },
+                    "swingT1":  {
+                                    "2":  {
+                                              "src":  "assets/shadow-partner/swingT1-2.png",
+                                              "origin":  {
+                                                             "y":  62,
+                                                             "x":  56
+                                                         }
+                                          },
+                                    "1":  {
+                                              "src":  "assets/shadow-partner/swingT1-1.png",
+                                              "origin":  {
+                                                             "y":  67,
+                                                             "x":  43
+                                                         }
+                                          },
+                                    "0":  {
+                                              "src":  "assets/shadow-partner/swingT1-0.png",
+                                              "origin":  {
+                                                             "y":  69,
+                                                             "x":  28
+                                                         }
+                                          }
+                                },
+                    "swingOF":  {
+                                    "2":  {
+                                              "src":  "assets/shadow-partner/swingOF-2.png",
+                                              "origin":  {
+                                                             "y":  75,
+                                                             "x":  53
+                                                         }
+                                          },
+                                    "3":  {
+                                              "src":  "assets/shadow-partner/swingOF-3.png",
+                                              "origin":  {
+                                                             "y":  58,
+                                                             "x":  75
+                                                         }
+                                          },
+                                    "1":  {
+                                              "src":  "assets/shadow-partner/swingOF-1.png",
+                                              "origin":  {
+                                                             "y":  79,
+                                                             "x":  34
+                                                         }
+                                          },
+                                    "0":  {
+                                              "src":  "assets/shadow-partner/swingOF-0.png",
+                                              "origin":  {
+                                                             "y":  63,
+                                                             "x":  38
+                                                         }
+                                          }
+                                },
+                    "stabT2":  {
+                                   "2":  {
+                                             "src":  "assets/shadow-partner/stabT2-2.png",
+                                             "origin":  {
+                                                            "y":  60,
+                                                            "x":  52
+                                                        }
+                                         },
+                                   "1":  {
+                                             "src":  "assets/shadow-partner/stabT2-1.png",
+                                             "origin":  {
+                                                            "y":  59,
+                                                            "x":  48
+                                                        }
+                                         },
+                                   "0":  {
+                                             "src":  "assets/shadow-partner/stabT2-0.png",
+                                             "origin":  {
+                                                            "y":  66,
+                                                            "x":  33
+                                                        }
+                                         }
+                               },
+                    "swingO2":  {
+                                    "2":  {
+                                              "src":  "assets/shadow-partner/swingO2-2.png",
+                                              "origin":  {
+                                                             "y":  64,
+                                                             "x":  41
+                                                         }
+                                          },
+                                    "1":  {
+                                              "src":  "assets/shadow-partner/swingO2-1.png",
+                                              "origin":  {
+                                                             "y":  67,
+                                                             "x":  37
+                                                         }
+                                          },
+                                    "0":  {
+                                              "src":  "assets/shadow-partner/swingO2-0.png",
+                                              "origin":  {
+                                                             "y":  69,
+                                                             "x":  32
+                                                         }
+                                          }
+                                },
+                    "swingP2":  {
+                                    "2":  {
+                                              "src":  "assets/shadow-partner/swingP2-2.png",
+                                              "origin":  {
+                                                             "y":  61,
+                                                             "x":  52
+                                                         }
+                                          },
+                                    "1":  {
+                                              "src":  "assets/shadow-partner/swingP2-1.png",
+                                              "origin":  {
+                                                             "y":  67,
+                                                             "x":  37
+                                                         }
+                                          },
+                                    "0":  {
+                                              "src":  "assets/shadow-partner/swingP2-0.png",
+                                              "origin":  {
+                                                             "y":  69,
+                                                             "x":  33
+                                                         }
+                                          }
+                                },
+                    "stabTF":  {
+                                   "2":  {
+                                             "src":  "assets/shadow-partner/stabTF-2.png",
+                                             "origin":  {
+                                                            "y":  95,
+                                                            "x":  45
+                                                        }
+                                         },
+                                   "3":  {
+                                             "src":  "assets/shadow-partner/stabTF-3.png",
+                                             "origin":  {
+                                                            "y":  60,
+                                                            "x":  62
+                                                        }
+                                         },
+                                   "1":  {
+                                             "src":  "assets/shadow-partner/stabTF-1.png",
+                                             "origin":  {
+                                                            "y":  63,
+                                                            "x":  36
+                                                        }
+                                         },
+                                   "0":  {
+                                             "src":  "assets/shadow-partner/stabTF-0.png",
+                                             "origin":  {
+                                                            "y":  64,
+                                                            "x":  39
+                                                        }
+                                         }
+                               },
+                    "swingO3":  {
+                                    "2":  {
+                                              "src":  "assets/shadow-partner/swingO3-2.png",
+                                              "origin":  {
+                                                             "y":  63,
+                                                             "x":  58
+                                                         }
+                                          },
+                                    "1":  {
+                                              "src":  "assets/shadow-partner/swingO3-1.png",
+                                              "origin":  {
+                                                             "y":  65,
+                                                             "x":  55
+                                                         }
+                                          },
+                                    "0":  {
+                                              "src":  "assets/shadow-partner/swingO3-0.png",
+                                              "origin":  {
+                                                             "y":  64,
+                                                             "x":  40
+                                                         }
+                                          }
+                                },
+                    "sit":  {
+                                "0":  {
+                                          "src":  "assets/shadow-partner/sit-0.png",
+                                          "origin":  {
+                                                         "y":  65,
+                                                         "x":  24
+                                                     }
+                                      }
+                            },
+                    "shoot2":  {
+                                   "2":  {
+                                             "src":  "assets/shadow-partner/shoot2-2.png",
+                                             "origin":  {
+                                                            "y":  68,
+                                                            "x":  29
+                                                        }
+                                         },
+                                   "3":  {
+                                             "src":  "assets/shadow-partner/shoot2-3.png",
+                                             "origin":  {
+                                                            "y":  68,
+                                                            "x":  29
+                                                        }
+                                         },
+                                   "4":  {
+                                             "src":  "assets/shadow-partner/shoot2-4.png",
+                                             "origin":  {
+                                                            "y":  68,
+                                                            "x":  28
+                                                        }
+                                         },
+                                   "1":  {
+                                             "src":  "assets/shadow-partner/shoot2-1.png",
+                                             "origin":  {
+                                                            "y":  68,
+                                                            "x":  29
+                                                        }
+                                         },
+                                   "0":  {
+                                             "src":  "assets/shadow-partner/shoot2-0.png",
+                                             "origin":  {
+                                                            "y":  68,
+                                                            "x":  29
+                                                        }
+                                         }
+                               },
+                    "swingTF":  {
+                                    "2":  {
+                                              "src":  "assets/shadow-partner/swingTF-2.png",
+                                              "origin":  {
+                                                             "y":  67,
+                                                             "x":  44
+                                                         }
+                                          },
+                                    "3":  {
+                                              "src":  "assets/shadow-partner/swingTF-3.png",
+                                              "origin":  {
+                                                             "y":  61,
+                                                             "x":  60
+                                                         }
+                                          },
+                                    "1":  {
+                                              "src":  "assets/shadow-partner/swingTF-1.png",
+                                              "origin":  {
+                                                             "y":  70,
+                                                             "x":  33
+                                                         }
+                                          },
+                                    "0":  {
+                                              "src":  "assets/shadow-partner/swingTF-0.png",
+                                              "origin":  {
+                                                             "y":  68,
+                                                             "x":  30
+                                                         }
+                                          }
+                                },
+                    "stand2":  {
+                                   "2":  {
+                                             "src":  "assets/shadow-partner/stand2-2.png",
+                                             "origin":  {
+                                                            "y":  69,
+                                                            "x":  28
+                                                        }
+                                         },
+                                   "1":  {
+                                             "src":  "assets/shadow-partner/stand2-1.png",
+                                             "origin":  {
+                                                            "y":  69,
+                                                            "x":  28
+                                                        }
+                                         },
+                                   "0":  {
+                                             "src":  "assets/shadow-partner/stand2-0.png",
+                                             "origin":  {
+                                                            "y":  69,
+                                                            "x":  28
+                                                        }
+                                         }
+                               },
+                    "shoot1":  {
+                                   "2":  {
+                                             "src":  "assets/shadow-partner/shoot1-2.png",
+                                             "origin":  {
+                                                            "y":  69,
+                                                            "x":  35
+                                                        }
+                                         },
+                                   "1":  {
+                                             "src":  "assets/shadow-partner/shoot1-1.png",
+                                             "origin":  {
+                                                            "y":  69,
+                                                            "x":  35
+                                                        }
+                                         },
+                                   "0":  {
+                                             "src":  "assets/shadow-partner/shoot1-0.png",
+                                             "origin":  {
+                                                            "y":  69,
+                                                            "x":  35
+                                                        }
+                                         }
+                               },
+                    "swingT2":  {
+                                    "2":  {
+                                              "src":  "assets/shadow-partner/swingT2-2.png",
+                                              "origin":  {
+                                                             "y":  61,
+                                                             "x":  56
+                                                         }
+                                          },
+                                    "1":  {
+                                              "src":  "assets/shadow-partner/swingT2-1.png",
+                                              "origin":  {
+                                                             "y":  67,
+                                                             "x":  37
+                                                         }
+                                          },
+                                    "0":  {
+                                              "src":  "assets/shadow-partner/swingT2-0.png",
+                                              "origin":  {
+                                                             "y":  67,
+                                                             "x":  28
+                                                         }
+                                          }
+                                },
+                    "dead":  {
+                                 "2":  {
+                                           "src":  "assets/shadow-partner/dead-2.png",
+                                           "origin":  {
+                                                          "y":  80,
+                                                          "x":  5
+                                                      }
+                                       },
+                                 "1":  {
+                                           "src":  "assets/shadow-partner/dead-1.png",
+                                           "origin":  {
+                                                          "y":  68,
+                                                          "x":  11
+                                                      }
+                                       },
+                                 "0":  {
+                                           "src":  "assets/shadow-partner/dead-0.png",
+                                           "origin":  {
+                                                          "y":  69,
+                                                          "x":  28
+                                                      }
+                                       }
+                             },
+                    "walk1":  {
+                                  "2":  {
+                                            "src":  "assets/shadow-partner/walk1-2.png",
+                                            "origin":  {
+                                                           "y":  69,
+                                                           "x":  28
+                                                       }
+                                        },
+                                  "3":  {
+                                            "src":  "assets/shadow-partner/walk1-3.png",
+                                            "origin":  {
+                                                           "y":  68,
+                                                           "x":  28
+                                                       }
+                                        },
+                                  "1":  {
+                                            "src":  "assets/shadow-partner/walk1-1.png",
+                                            "origin":  {
+                                                           "y":  68,
+                                                           "x":  28
+                                                       }
+                                        },
+                                  "0":  {
+                                            "src":  "assets/shadow-partner/walk1-0.png",
+                                            "origin":  {
+                                                           "y":  69,
+                                                           "x":  28
+                                                       }
+                                        }
+                              },
+                    "swingT3":  {
+                                    "2":  {
+                                              "src":  "assets/shadow-partner/swingT3-2.png",
+                                              "origin":  {
+                                                             "y":  64,
+                                                             "x":  44
+                                                         }
+                                          },
+                                    "1":  {
+                                              "src":  "assets/shadow-partner/swingT3-1.png",
+                                              "origin":  {
+                                                             "y":  61,
+                                                             "x":  39
+                                                         }
+                                          },
+                                    "0":  {
+                                              "src":  "assets/shadow-partner/swingT3-0.png",
+                                              "origin":  {
+                                                             "y":  67,
+                                                             "x":  28
+                                                         }
+                                          }
+                                },
+                    "stabO1":  {
+                                   "1":  {
+                                             "src":  "assets/shadow-partner/stabO1-1.png",
+                                             "origin":  {
+                                                            "y":  63,
+                                                            "x":  48
+                                                        }
+                                         },
+                                   "0":  {
+                                             "src":  "assets/shadow-partner/stabO1-0.png",
+                                             "origin":  {
+                                                            "y":  66,
+                                                            "x":  34
+                                                        }
+                                         }
+                               },
+                    "proneStab":  {
+                                      "1":  {
+                                                "src":  "assets/shadow-partner/proneStab-1.png",
+                                                "origin":  {
+                                                               "y":  41,
+                                                               "x":  48
+                                                           }
+                                            },
+                                      "0":  {
+                                                "src":  "assets/shadow-partner/proneStab-0.png",
+                                                "origin":  {
+                                                               "y":  41,
+                                                               "x":  48
+                                                           }
+                                            }
+                                  },
+                    "swingP1":  {
+                                    "2":  {
+                                              "src":  "assets/shadow-partner/swingP1-2.png",
+                                              "origin":  {
+                                                             "y":  62,
+                                                             "x":  56
+                                                         }
+                                          },
+                                    "1":  {
+                                              "src":  "assets/shadow-partner/swingP1-1.png",
+                                              "origin":  {
+                                                             "y":  67,
+                                                             "x":  43
+                                                         }
+                                          },
+                                    "0":  {
+                                              "src":  "assets/shadow-partner/swingP1-0.png",
+                                              "origin":  {
+                                                             "y":  69,
+                                                             "x":  28
+                                                         }
+                                          }
+                                },
+                    "ladder":  {
+                                   "1":  {
+                                             "src":  "assets/shadow-partner/ladder-1.png",
+                                             "origin":  {
+                                                            "y":  65,
+                                                            "x":  23
+                                                        }
+                                         },
+                                   "0":  {
+                                             "src":  "assets/shadow-partner/ladder-0.png",
+                                             "origin":  {
+                                                            "y":  67,
+                                                            "x":  26
+                                                        }
+                                         }
+                               },
+                    "fly":  {
+                                "1":  {
+                                          "src":  "assets/shadow-partner/fly-1.png",
+                                          "origin":  {
+                                                         "y":  74,
+                                                         "x":  28
+                                                     }
+                                      },
+                                "0":  {
+                                          "src":  "assets/shadow-partner/fly-0.png",
+                                          "origin":  {
+                                                         "y":  74,
+                                                         "x":  28
+                                                     }
+                                      }
+                            },
+                    "walk2":  {
+                                  "2":  {
+                                            "src":  "assets/shadow-partner/walk2-2.png",
+                                            "origin":  {
+                                                           "y":  69,
+                                                           "x":  28
+                                                       }
+                                        },
+                                  "3":  {
+                                            "src":  "assets/shadow-partner/walk2-3.png",
+                                            "origin":  {
+                                                           "y":  68,
+                                                           "x":  28
+                                                       }
+                                        },
+                                  "1":  {
+                                            "src":  "assets/shadow-partner/walk2-1.png",
+                                            "origin":  {
+                                                           "y":  68,
+                                                           "x":  28
+                                                       }
+                                        },
+                                  "0":  {
+                                            "src":  "assets/shadow-partner/walk2-0.png",
+                                            "origin":  {
+                                                           "y":  69,
+                                                           "x":  28
+                                                       }
+                                        }
+                              },
+                    "swingPF":  {
+                                    "2":  {
+                                              "src":  "assets/shadow-partner/swingPF-2.png",
+                                              "origin":  {
+                                                             "y":  95,
+                                                             "x":  45
+                                                         }
+                                          },
+                                    "3":  {
+                                              "src":  "assets/shadow-partner/swingPF-3.png",
+                                              "origin":  {
+                                                             "y":  62,
+                                                             "x":  71
+                                                         }
+                                          },
+                                    "1":  {
+                                              "src":  "assets/shadow-partner/swingPF-1.png",
+                                              "origin":  {
+                                                             "y":  63,
+                                                             "x":  36
+                                                         }
+                                          },
+                                    "0":  {
+                                              "src":  "assets/shadow-partner/swingPF-0.png",
+                                              "origin":  {
+                                                             "y":  64,
+                                                             "x":  39
+                                                         }
+                                          }
+                                },
+                    "swingO1":  {
+                                    "2":  {
+                                              "src":  "assets/shadow-partner/swingO1-2.png",
+                                              "origin":  {
+                                                             "y":  62,
+                                                             "x":  60
+                                                         }
+                                          },
+                                    "1":  {
+                                              "src":  "assets/shadow-partner/swingO1-1.png",
+                                              "origin":  {
+                                                             "y":  68,
+                                                             "x":  34
+                                                         }
+                                          },
+                                    "0":  {
+                                              "src":  "assets/shadow-partner/swingO1-0.png",
+                                              "origin":  {
+                                                             "y":  63,
+                                                             "x":  33
+                                                         }
+                                          }
+                                }
+                },
+    "source":  "Skill.wz/411.img/skill/4111002/special",
+    "skill":  "4111002"
+}

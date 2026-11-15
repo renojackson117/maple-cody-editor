@@ -1,21 +1,22 @@
-표창 동작 수정 근거
+현재 페이지 버전: v1.5.0
 
-직접 확인한 데이터: KMS v1.2.55
-- Character.wz/00002000.img/swingO1~3: 300/150/350ms.
-- Character.wz/Weapon/01472000.img/info/afterImage: swordOL.
-- Character.wz/Afterimage/swordOL.img/1/swingO1~3: 공격 프레임 인덱스 2.
-- 이에 따른 첫 발사 시점: 원본 모션 시간 기준 450ms.
-- Skill.wz의 bulletCount: 럭키세븐 2, 트리플 스로우 3.
-- Item.wz/Consume/0207.img: 각 bullet 프레임의 실제 PNG, origin, delay 사용.
+WZ에서 직접 추출한 데이터 (제공된 KMS v1.2.55)
+- 캐릭터: swingO1/2/3의 300/150/350ms 모션과 공격 프레임 인덱스 2.
+- 표창: Item.wz/Consume/0207.img의 bullet 이미지, origin, delay.
+- 쉐도우 파트너: Skill.wz/411.img/skill/4111002/special의 실제 모션별 이미지와 origin.
+- 럭키세븐 2발, 트리플 스로우 3발: Skill.wz의 bulletCount.
 
-WZ에 없는 이동 로직은 별도 참고 구현으로 구분한다.
-- 참고: HeavenClient (원본 Nexon 클라이언트가 아닌 v83 재구현).
-- https://github.com/ryantpayton/MapleStory-Client/blob/master/Gameplay/Combat/Bullet.cpp
-- https://github.com/ryantpayton/MapleStory-Client/blob/master/Constants.h
-- 참고 구현의 발사 위치: 캐릭터 앞 30px, 위 26px.
-- 참고 구현의 이동량: clamp(목표까지 가로 거리 / 32, 3, 6)px / 8ms.
-- 현재 빈 공간 400px 목표에서는 750px/s. 실제 KMS 실행 파일과 일치 여부는 미검증.
-- 연속 발사 간격과 쉐도우 파트너 위치/지연은 기존 미리보기 근사값 유지.
-- 재생 속도 슬라이더는 모션과 표창의 시간을 함께 변경한다.
+클라이언트 좌표 및 시간 로직
+- 이전의 임의 -55px 보정과 HeavenClient 재구현의 -30/-26, 750px/s 값은 제거했다.
+- 공개된 원본 GMS v95 클라이언트의 역분석 자료에서 추출했다.
+- https://github.com/jon-zu/shroom95-decomp/tree/6eada755b00522e39213ee93e75471a98b1e30a3
+- 표창 발사: CUserRemote::OnShootAttack의 일반 분기에서 전방 50px.
+- 높이: GetShootAttackPt0 기본 분기의 캐릭터 Y -28px.
+- 쉐도우 파트너: CUser::PrepareShadowPartnerActionLayer 일반 분기의 뒤쪽 30px, Y 추가 이동 0.
+- 표창 간격: CUser::GetBulletDelay의 표창 분기 120ms.
+- 빈 공간 발사: OnShootAttack의 아대 분기 목표 전방 200px, 거리 1px당 1.5ms 이동.
+- 이미지 좌표 origin과 클라이언트 레이어 오프셋은 서로 다른 데이터다.
+- KMS v1.2.55 실행 파일은 코드가 압축되어 있어 해당 파일의 동일 로직까지 직접 대조하지 못했다.
+- 따라서 KMS와 완전히 동일하다고 검증된 값은 아니다. 데이터 출처 버전을 혼용하지 않도록 기록한다.
 
-기계 판독용 값과 출처는 throw-config.json에 구분해 보존했다.
+적용값과 함수 주소/분기 출처는 throw-config.json에 보존했다.
