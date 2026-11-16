@@ -1,0 +1,354 @@
+{
+  "source": {
+    "file": "Character.wz",
+    "version": 55,
+    "sha256": "fbf5aaadaf55e7b995a04863308d9716f83e6b3805cb835c658763f6dd5edf18",
+    "preset": "Afterimage tier 0: swordOL for one-hand, swordTL for two-hand, poleArm for polearm"
+  },
+  "actions": {
+    "swingO1": {
+      "sourcePath": "Character.wz/Afterimage/swordOL.img/0/swingO1",
+      "frames": {
+        "2": {
+          "0": {
+            "origin": {
+              "x": 97,
+              "y": 69
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_swordOL_swingO1_2_0.png"
+          }
+        }
+      }
+    },
+    "swingO2": {
+      "sourcePath": "Character.wz/Afterimage/swordOL.img/0/swingO2",
+      "frames": {
+        "2": {
+          "0": {
+            "origin": {
+              "x": 80,
+              "y": 59
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_swordOL_swingO2_2_0.png"
+          }
+        }
+      }
+    },
+    "swingO3": {
+      "sourcePath": "Character.wz/Afterimage/swordOL.img/0/swingO3",
+      "frames": {
+        "2": {
+          "0": {
+            "origin": {
+              "x": 110,
+              "y": 56
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_swordOL_swingO3_2_0.png"
+          }
+        }
+      }
+    },
+    "swingOF": {
+      "sourcePath": "Character.wz/Afterimage/swordOL.img/0/swingOF",
+      "frames": {
+        "3": {
+          "0": {
+            "origin": {
+              "x": 132,
+              "y": 50
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_swordOL_swingOF_3_0.png"
+          }
+        }
+      }
+    },
+    "stabO1": {
+      "sourcePath": "Character.wz/Afterimage/swordOL.img/0/stabO1",
+      "frames": {
+        "1": {
+          "0": {
+            "origin": {
+              "x": 60,
+              "y": 37
+            },
+            "delay": 30,
+            "src": "assets/basic_swordOL_stabO1_1_0.png"
+          },
+          "1": {
+            "origin": {
+              "x": 84,
+              "y": 37
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_swordOL_stabO1_1_1.png"
+          }
+        }
+      }
+    },
+    "stabO2": {
+      "sourcePath": "Character.wz/Afterimage/swordOL.img/0/stabO2",
+      "frames": {
+        "1": {
+          "0": {
+            "origin": {
+              "x": 51,
+              "y": 37
+            },
+            "delay": 30,
+            "src": "assets/basic_swordOL_stabO2_1_0.png"
+          },
+          "1": {
+            "origin": {
+              "x": 83,
+              "y": 37
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_swordOL_stabO2_1_1.png"
+          }
+        }
+      }
+    },
+    "stabOF": {
+      "sourcePath": "Character.wz/Afterimage/swordOL.img/0/stabOF",
+      "frames": {
+        "2": {
+          "0": {
+            "origin": {
+              "x": 86,
+              "y": 39
+            },
+            "delay": 30,
+            "src": "assets/basic_swordOL_stabOF_2_0.png"
+          },
+          "1": {
+            "origin": {
+              "x": 113,
+              "y": 39
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_swordOL_stabOF_2_1.png"
+          }
+        }
+      }
+    },
+    "proneStab": {
+      "sourcePath": "Character.wz/Afterimage/swordOL.img/0/proneStab",
+      "frames": {
+        "1": {
+          "0": {
+            "origin": {
+              "x": 53,
+              "y": 19
+            },
+            "delay": 30,
+            "src": "assets/basic_swordOL_proneStab_1_0.png"
+          },
+          "1": {
+            "origin": {
+              "x": 75,
+              "y": 19
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_swordOL_proneStab_1_1.png"
+          }
+        }
+      }
+    },
+    "swingT1": {
+      "sourcePath": "Character.wz/Afterimage/swordTL.img/0/swingT1",
+      "frames": {
+        "2": {
+          "0": {
+            "origin": {
+              "x": 106,
+              "y": 103
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_swordTL_swingT1_2_0.png"
+          }
+        }
+      }
+    },
+    "swingT2": {
+      "sourcePath": "Character.wz/Afterimage/swordTL.img/0/swingT2",
+      "frames": {
+        "2": {
+          "0": {
+            "origin": {
+              "x": 92,
+              "y": 87
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_swordTL_swingT2_2_0.png"
+          }
+        }
+      }
+    },
+    "swingT3": {
+      "sourcePath": "Character.wz/Afterimage/swordTL.img/0/swingT3",
+      "frames": {
+        "2": {
+          "0": {
+            "origin": {
+              "x": 93,
+              "y": 83
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_swordTL_swingT3_2_0.png"
+          }
+        }
+      }
+    },
+    "swingTF": {
+      "sourcePath": "Character.wz/Afterimage/swordTL.img/0/swingTF",
+      "frames": {
+        "3": {
+          "0": {
+            "origin": {
+              "x": 122,
+              "y": 110
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_swordTL_swingTF_3_0.png"
+          }
+        }
+      }
+    },
+    "swingP1": {
+      "sourcePath": "Character.wz/Afterimage/poleArm.img/0/swingP1",
+      "frames": {
+        "2": {
+          "0": {
+            "origin": {
+              "x": 144,
+              "y": 129
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_poleArm_swingP1_2_0.png"
+          }
+        }
+      }
+    },
+    "swingP2": {
+      "sourcePath": "Character.wz/Afterimage/poleArm.img/0/swingP2",
+      "frames": {
+        "2": {
+          "0": {
+            "origin": {
+              "x": 127,
+              "y": 131
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_poleArm_swingP2_2_0.png"
+          }
+        }
+      }
+    },
+    "swingPF": {
+      "sourcePath": "Character.wz/Afterimage/poleArm.img/0/swingPF",
+      "frames": {
+        "3": {
+          "0": {
+            "origin": {
+              "x": 155,
+              "y": 132
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_poleArm_swingPF_3_0.png"
+          }
+        }
+      }
+    },
+    "stabT1": {
+      "sourcePath": "Character.wz/Afterimage/poleArm.img/0/stabT1",
+      "frames": {
+        "2": {
+          "0": {
+            "origin": {
+              "x": 97,
+              "y": 41
+            },
+            "delay": 30,
+            "src": "assets/basic_poleArm_stabT1_2_0.png"
+          },
+          "1": {
+            "origin": {
+              "x": 135,
+              "y": 41
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_poleArm_stabT1_2_1.png"
+          }
+        }
+      }
+    },
+    "stabT2": {
+      "sourcePath": "Character.wz/Afterimage/poleArm.img/0/stabT2",
+      "frames": {
+        "2": {
+          "0": {
+            "origin": {
+              "x": 86,
+              "y": 43
+            },
+            "delay": 30,
+            "src": "assets/basic_poleArm_stabT2_2_0.png"
+          },
+          "1": {
+            "origin": {
+              "x": 116,
+              "y": 54
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_poleArm_stabT2_2_1.png"
+          }
+        }
+      }
+    },
+    "stabTF": {
+      "sourcePath": "Character.wz/Afterimage/poleArm.img/0/stabTF",
+      "frames": {
+        "3": {
+          "0": {
+            "origin": {
+              "x": 116,
+              "y": 44
+            },
+            "delay": 30,
+            "src": "assets/basic_poleArm_stabTF_3_0.png"
+          },
+          "1": {
+            "origin": {
+              "x": 127,
+              "y": 40
+            },
+            "delay": 200,
+            "a1": 0,
+            "src": "assets/basic_poleArm_stabTF_3_1.png"
+          }
+        }
+      }
+    }
+  }
+}
