@@ -5,7 +5,7 @@ const ed=window.codyEditor={document:null,tool:'brush',editing:false,stage:null,
 function setColor(v){['R','G','B','A'].forEach((k,i)=>el('color'+k).value=v[i]);el('paintColor').value='#'+v.slice(0,3).map(x=>x.toString(16).padStart(2,'0')).join('');}
 el('paintColor').oninput=e=>{const h=e.target.value;setColor([parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16),rgba()[3]])};for(const k of ['R','G','B','A'])el('color'+k).oninput=()=>setColor(rgba());function swatch(v){const b=document.createElement('button');b.className='swatch';b.style.background=`rgba(${v.join(',').replace(/,([^,]*)$/,(_,a)=>','+(+a/255))})`;b.title=v.join(', ');b.onclick=()=>setColor(v);el('palette').append(b)}for(const h of ['17251f','ffffff','d84d4d','e99b5b','eedb8a','88b577','6aabb2','6f81c0','bb83b3','e8a5a5','000000'])swatch([0,2,4].map(i=>parseInt(h.slice(i,i+2),16)).concat(255));el('addSwatch').onclick=()=>swatch(rgba());
 function choose(t){ed.tool=t;for(const b of el('tools').children)b.setAttribute('aria-pressed',b.dataset.tool===t);options();canvas.style.cursor=['move'].includes(t)?'move':t==='eyedrop'?'crosshair':'crosshair'}for(const [t,label,key]of tools){const b=document.createElement('button');b.dataset.tool=t;b.innerHTML=toolIcon(t);b.setAttribute('aria-label',label);b.title=label+' ('+key+')';b.onclick=()=>choose(t);el('tools').append(b)}
-function num(label,value,min,max,fn){const l=document.createElement('label');l.textContent=label+' ';const i=document.createElement('input'),slider=document.createElement('input');i.type='number';i.min=slider.min=min;i.max=slider.max=max;i.value=slider.value=value;slider.type='range';slider.className='tool-slider';slider.setAttribute('aria-label',label+' 드래그 조절');function update(v){v=Math.max(min,Math.min(max,+v||min));i.value=slider.value=v;fn(v)}i.oninput=()=>update(i.value);slider.oninput=()=>update(slider.value);l.append(i);el('toolOptions').append(l,slider)}function options(){el('toolOptions').replaceChildren();if(['brush','eraser','rect','ellipse'].includes(ed.tool))num('크기',ed.size,1,64,v=>ed.size=v);if(['fill','wand'].includes(ed.tool))num('색상 허용차',ed.tolerance,0,255,v=>ed.tolerance=v);if(['rect','ellipse'].includes(ed.tool)){const l=document.createElement('label'),i=document.createElement('input');i.type='checkbox';i.checked=ed.filled;i.onchange=()=>ed.filled=i.checked;l.append(i,' 내부 채우기');el('toolOptions').append(l)}if(['select','lasso','wand'].includes(ed.tool)){const s=document.createElement('span');s.className='mini';s.textContent='사각 선택 안쪽 드래그로 이동 · 클릭/Esc 해제 · Delete 삭제';el('toolOptions').append(s)}}choose('brush');
+function num(label,value,min,max,fn){const l=document.createElement('label');l.textContent=label+' ';const i=document.createElement('input'),slider=document.createElement('input');i.type='number';i.min=slider.min=min;i.max=slider.max=max;i.value=slider.value=value;slider.type='range';slider.className='tool-slider';slider.setAttribute('aria-label',label+' 드래그 조절');function update(v){v=Math.max(min,Math.min(max,+v||min));i.value=slider.value=v;fn(v)}i.oninput=()=>update(i.value);slider.oninput=()=>update(slider.value);l.append(i);el('toolOptions').append(l,slider)}function options(){el('toolOptions').replaceChildren();if(['brush','eraser','rect','ellipse'].includes(ed.tool))num('크기',ed.size,1,64,v=>ed.size=v);if(['fill','wand'].includes(ed.tool))num('색상 허용차',ed.tolerance,0,255,v=>ed.tolerance=v);if(['rect','ellipse'].includes(ed.tool)){const l=document.createElement('label'),i=document.createElement('input');i.type='checkbox';i.checked=ed.filled;i.onchange=()=>ed.filled=i.checked;l.append(i,' 내부 채우기');el('toolOptions').append(l)}if(['select','lasso','wand'].includes(ed.tool)){const s=document.createElement('span');s.className='mini';s.textContent='Ctrl+C 복사 · Ctrl+V 붙여넣기 · 선택 안쪽 드래그로 이동 · Esc 해제 · Delete 삭제';el('toolOptions').append(s)}}choose('brush');
 function matchesTag(tag,a){return tag.name.toLowerCase()===a.toLowerCase()||tag.name===aliases[a]||tag.name===aliases[a]?.replace(/ /g,'')}
 function range(a){if(starActions[a])a=starActions[a];if(!ed.document)return [];const t=ed.document.tags.find(t=>matchesTag(t,a));return t?Array.from({length:t.to-t.from+1},(_,i)=>t.from+i):ed.document.frames.map((_,i)=>i)}
 ed.current=(a,f)=>{if(!ed.document)return null;let actual=a,index=f;if(ed.document.psd&&body?.[a]&&!ed.document.tags.some(t=>matchesTag(t,a))){const pose=bodyPose(a,f);const reference=window.CapePSD?.references[a+'/'+f];const path=(reference||pose.path).split('/');actual=path[0]==='prone'?'proneStab':path[0];index=+path[1]||0;if(!ed.document.tags.some(t=>matchesTag(t,actual))){actual='stand1';index=0}}const indexes=range(actual),ix=indexes[(Math.max(0,index)||0)%indexes.length],entry=ed.document.frames[ix];if(!entry)return null;entry.cel.origin=entry.origin||ed.document.origin;return entry.cel};
@@ -26,6 +26,30 @@ ed.shortcut=e=>{if(e.code==='Space'&&!['INPUT','TEXTAREA','SELECT'].includes(doc
 
 // Read native image clipboard data (including Aseprite's OS bitmap clipboard).
 function textTarget(target){return target?.closest?.('input,textarea,select,[contenteditable="true"]')}
+// Copy only the selected pixels of the active layer as a transparent PNG.
+function selectionImage(cur){
+ const target=activeCanvas(cur),area=bounds(target);
+ if(!area)return null;
+ const source=pixels(target),out=newCanvas(area.w,area.h),g=out.getContext('2d'),image=g.createImageData(area.w,area.h);
+ for(let y=0;y<area.h;y++)for(let x=0;x<area.w;x++){
+  const i=(area.y+y)*target.width+area.x+x;
+  if(ed.mask[i])image.data.set(source.data.subarray(i*4,i*4+4),(y*area.w+x)*4);
+ }
+ g.putImageData(image,0,0);return out;
+}
+document.addEventListener('copy',e=>{
+ if(textTarget(e.target)||textTarget(document.activeElement)||!ed.document)return;
+ if(ed.drag)endDrag();
+ const cur=ed.current(action,frame);
+ if(!cur||!ed.mask||ed.maskCel!==cur)return;
+ e.preventDefault();
+ try{
+  if(!navigator.clipboard?.write||typeof ClipboardItem==='undefined')throw Error('이 브라우저에서는 이미지 복사를 지원하지 않습니다. HTTPS 또는 localhost에서 열어 주세요.');
+  const image=selectionImage(cur);if(!image)return;
+  const png=new Promise((resolve,reject)=>image.toBlob(blob=>blob?resolve(blob):reject(Error('이미지를 만들지 못했습니다.')),'image/png'));
+  navigator.clipboard.write([new ClipboardItem({'image/png':png})]).then(()=>status('선택 영역 복사 완료 · Ctrl+V로 붙여넣기'),err=>status('복사 실패: '+err.message));
+ }catch(err){status('복사 실패: '+err.message)}
+});
 document.addEventListener('paste',async e=>{
  if(textTarget(e.target)||textTarget(document.activeElement)||!ed.document)return;
  const items=Array.from(e.clipboardData?.items||[]);
